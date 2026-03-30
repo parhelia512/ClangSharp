@@ -100,7 +100,7 @@ public struct VersionTuple : IEquatable<VersionTuple>
     public bool HasSubminor => (subminor & HasFlag) == HasFlag;
     public bool HasBuild => (build & HasFlag) == HasFlag;
 
-    public bool IsEmpty => major == 0 && minor == 0 && subminor == 0 && build == 0;
+    public bool IsEmpty => Major == 0 && MinorOrZero == 0 && SubminorOrZero == 0 && BuildOrZero == 0;
 
     public static bool operator ==(VersionTuple x, VersionTuple y)
     {
